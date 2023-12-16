@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>G Libro</title>
+    <style type="">
+      table,
+      td,
+      th {
+        border: 1px solid #333;
+      }
+
+      thead {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./color.html">Getionar color</a>
+    <a href="./libro.html">Getionar Libro</a>
+    <h4>Id</h4>
+    <input type="number" id="id" />
+    <h4>Nombre</h4>
+    <input type="text" id="name" />
+    <h4>Fecha</h4>
+    <input type="date" id="fecha" />
+    <h4>Color</h4>
+    <select id="color"></select>
+    <h4>Autor</h4>
+
+    <input type="text" id="autor" />
+
+
+    <select name="" id="pais">
+      <option value="estadosunidos">EEUU</option>
+      <option value="europa">Europa</option>
+  </select>
+
+  <input type="text" id="fechanacimiento"> 
+  
+
+    <button id="btnCreate">Crear</button>
+    <button id="btnSave">Save</button>
+    <button id="btnDelete">Delete</button>
+    <button id="btnList">List</button>
+
+    <section id="table"></section>
+
+    <script type="module">
+      import { CLibro } from "./controller/CLibro.js";
+      const libro = new CLibro();
+      libro.list();
+    </script>
+  </body>
+</html>
